@@ -1,0 +1,1 @@
+GitHub was ignoring the /uploads folder, so I added this text file so project would upload correctly
