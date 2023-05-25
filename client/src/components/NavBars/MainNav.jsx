@@ -7,7 +7,7 @@ const MainNav = () => {
     <div className="header">
       <nav className="navbar bg-light navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
         <div className="container-fluid">
-          <Link to="/display" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img src={logo} alt="imageLogo" className="logo" style={{  height: "100px", width: "100px" }}/>
 
           </Link>
