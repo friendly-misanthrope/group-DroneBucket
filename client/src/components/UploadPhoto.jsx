@@ -112,7 +112,7 @@ const UploadPhoto = (props) => {
 
             
             <div className="form-group">
-                <label className="form-label">Image:</label>
+                <label className="form-label">Image (limit 20MB):</label>
                 <input
                   className="form-control"
                   type="file"

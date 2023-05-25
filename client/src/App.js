@@ -1,14 +1,14 @@
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React, { useState } from "react";
-
+import { useState } from "react";
 import Login from './components/Login';
 import Register from './components/Register'
 import DisplayOnePage from './views/DisplayOnePage';
 import MainPage from './views/MainPage';
 import CreatePage from './views/CreatePage';
 import EditOne from './components/EditPhoto';
+import './App.css'
 
 
 function App() {
