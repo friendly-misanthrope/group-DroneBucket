@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate, Navigate } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -18,7 +18,7 @@ const DisplayOne = () => {
         setPhoto(res.data.photo);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   //deletes from the database when user buys the item
   const deleteHandler = (id) => {
@@ -45,6 +45,7 @@ const DisplayOne = () => {
           <img
             src={`http://172.18.70.191:8000/${photo.imageUploaded}`}
             style={{ width: "500px", height: "350px" }}
+            alt={photo.description}
           />
           
         </div>

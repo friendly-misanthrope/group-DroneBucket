@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DisplayPhotos = () => {
-  const { user_id } = useParams();
 
   const [photos, setPhotos] = useState([]);
-  // const [userPhotos, setUserPhotos] = useState([]);
-  const [currentUser, setCurrentUser] = useState(null);
 
   
 

@@ -15,7 +15,6 @@ function App() {
 
   
   const [droneDetails, setDroneDetails] = useState([])
-  const [imageDetails, setImageDetails] = useState([])
 
   return (
     <div className="App">

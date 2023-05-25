@@ -93,6 +93,7 @@ const EditPhoto = (props) => {
               <img
                 src={`http://172.18.70.191:8000/${photo.imageUploaded}`}
                 style={{ width: "200px", height: "140px", margin: "1rem auto" }}
+                alt={photo.description}
               />
             </div>
 

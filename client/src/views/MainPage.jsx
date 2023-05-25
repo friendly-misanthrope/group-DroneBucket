@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {  Link } from "react-router-dom";
 import MainNav from '../components/NavBars/MainNav';
 import DisplayPhotos from '../components/DisplayPhotos';
 
