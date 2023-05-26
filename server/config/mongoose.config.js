@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 
 
-                                             //! always change this from project to project
-mongoose.connect("mongodb://192.168.1.3:27017/droneProj", { 
+                                             
+mongoose.connect("mongodb://127.0.0.1:27017/droneProj", { 
     useNewUrlParser: true, 
     useUnifiedTopology: true,
     

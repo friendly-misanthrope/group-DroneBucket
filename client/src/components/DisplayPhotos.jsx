@@ -10,7 +10,7 @@ const DisplayPhotos = () => {
 
   useEffect(() => {
     axios
-      .get("http://172.18.70.191:8000/api/allPhotos")
+      .get("http://localhost:8000/api/allPhotos")
       .then((res) => {
         setPhotos(res.data.photos);
       })
@@ -38,7 +38,7 @@ const DisplayPhotos = () => {
             style={{ width: "18rem" }}
           >
             <img
-              src={`http://172.18.70.191:8000/${photo.imageUploaded}`}
+              src={`http://localhost:8000/${photo.imageUploaded}`}
               className="card-img-top img-fluid"
               style={{
                 width: "100%",

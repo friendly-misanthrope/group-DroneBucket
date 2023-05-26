@@ -20,7 +20,7 @@ const EditPhoto = (props) => {
   const [errors, setErrors] = useState({})
 
   useEffect(() => {
-    axios.get(`http://172.18.70.191:8000/api/${id}`)
+    axios.get(`http://localhost:8000/api/${id}`)
       .then((res) => {
 
         setPhoto(res.data.photo)
@@ -36,7 +36,7 @@ const EditPhoto = (props) => {
   const onSubmitHandler = (e) => {
     e.preventDefault()
 
-    axios.put(`http://172.18.70.191:8000/api/${id}/edit`, photo)
+    axios.put(`http://localhost:8000/api/${id}/edit`, photo)
       .then((res) => {
         console.log("Post data: ", res.data)
         setDroneDetails([...droneDetails, res.data])
@@ -91,16 +91,18 @@ const EditPhoto = (props) => {
 
             <div className="img-prev" style={{ display: "flex", justifyContent: "flex-end" }}>
               <img
-                src={`http://172.18.70.191:8000/${photo.imageUploaded}`}
-                style={{ width: "200px", height: "140px", margin: "1rem auto" }}
+                src={`http://localhost:8000/${photo.imageUploaded}`}
+                style={{ width: "30rem", height: "20rem", margin: "1rem auto" }}
                 alt={photo.description}
               />
             </div>
 
             <br />
-            {/* Was getting error "value" type on input should not be null */}
-            {/* <input type="hidden" name="user_id" value={photo.user_id} /> */}
-            <input className="btn btn-primary" type="submit" />
+                
+            <div className="submit-input" style={{ display: "flex", justifyContent: "center" }}>
+              <input className="btn btn-primary" type="submit" value="Submit Edit" />
+            </div>
+            
 
           </div>
         </form>

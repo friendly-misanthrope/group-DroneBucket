@@ -7,7 +7,7 @@ import Register from './components/Register'
 import DisplayOnePage from './views/DisplayOnePage';
 import MainPage from './views/MainPage';
 import CreatePage from './views/CreatePage';
-import EditOne from './components/EditPhoto';
+import EditPhoto from './components/EditPhoto';
 import './App.css'
 
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/photo/:id" element={<DisplayOnePage/>} /> 
           <Route element={<MainPage/> } path="/" default   />
           <Route path='/photos/add' element={ <CreatePage/>  } /> 
-          <Route path='/photo/:id/edit' element={ <EditOne droneDetails = {droneDetails} setDroneDetails = {setDroneDetails}/> } />
+          <Route path='/photo/:id/edit' element={ <EditPhoto droneDetails = {droneDetails} setDroneDetails = {setDroneDetails}/> } />
         </Routes>
       </BrowserRouter>
       

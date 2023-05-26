@@ -13,7 +13,7 @@ const DisplayOne = () => {
 
   useEffect(() => {
     axios
-      .get(`http://172.18.70.191:8000/api/${id}`)
+      .get(`http://localhost:8000/api/${id}`)
       .then((res) => {
         setPhoto(res.data.photo);
       })
@@ -24,7 +24,7 @@ const DisplayOne = () => {
   const deleteHandler = (id) => {
     if (window.confirm(`Are you sure you want to delete ${photo.title}? This action cannot be undone!`)){
       axios
-      .delete(`http://172.18.70.191:8000/api/delete/${id}`)
+      .delete(`http://localhost:8000/api/delete/${id}`)
       .then((res) => {
         console.log(res);
         const updatedPhoto = photo.filter((photos) => photos._id !== id);
@@ -43,7 +43,7 @@ const DisplayOne = () => {
       <div className="d-flex justify-content-evenly">
         <div className=" row">
           <img
-            src={`http://172.18.70.191:8000/${photo.imageUploaded}`}
+            src={`http://localhost:8000/${photo.imageUploaded}`}
             style={{ width: "500px", height: "350px" }}
             alt={photo.description}
           />

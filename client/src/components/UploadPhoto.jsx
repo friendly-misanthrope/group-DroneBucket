@@ -38,7 +38,7 @@ const UploadPhoto = (props) => {
     formData.append("user_id", photo.user_id);
 
     axios
-      .post("http://172.18.70.191:8000/api/newPhoto", formData)
+      .post("http://localhost:8000/api/newPhoto", formData)
       .then((res) => {
         console.log("Post data:", res.data);
         setDroneDetails([...droneDetails, res.data]);
@@ -122,7 +122,7 @@ const UploadPhoto = (props) => {
                 {imageError && <p className="text-danger">{imageError}</p>}
 
               </div>
-                <br /> 
+              <br /> 
            
             <input type="hidden" name="user_id" value={photo.user_id} />
             <input className="btn btn-primary" type="submit" />
